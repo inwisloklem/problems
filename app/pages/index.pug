@@ -1,0 +1,241 @@
+doctype html
+
+html(lang = "ru")
+  include parts/head.pug
+
+  body
+    include parts/svg-sprite.pug
+
+    header.page-header
+      h1.visually-hidden Проблемные зоны
+
+      h2.page-header__title Избавьтесь от лишнего веса в&nbsp;проблемных местах уже сейчас!
+
+      .page-header__wrapper
+        .regform
+          form.regform__form(action = "#", method = "post")
+            input.regform__name(type = "text", placeholder = "Введите ваше имя")
+            input.regform__tel(type = "tel", placeholder = "Введите номер телефона")
+            .regform__wrapper
+              input.regform__height(type = "text", placeholder = "Рост (см)")
+              input.regform__weight(type = "text", placeholder = "Вес (кг)")
+              input.regform__age(type = "text", placeholder = "Возраст (лет)")
+                          
+            button.btn(type = "submit") Записаться
+
+        .timer.page-header__timer
+          h3.timer__title До окончания акции:
+
+          .timer__block
+            .timer__wrapper
+              .timer__cell.timer__cell--day-1 0
+              .timer__cell.timer__cell--day-2 0
+            .timer__text Дней
+
+          .timer__block
+            .timer__wrapper
+              .timer__cell.timer__cell--hour-1 0
+              .timer__cell.timer__cell--hour-2 0
+            .timer__text Часов
+
+          .timer__block
+            .timer__wrapper
+              .timer__cell.timer__cell--min-1 0
+              .timer__cell.timer__cell--min-2 0
+            .timer__text Минут
+
+          .timer__block
+            .timer__wrapper
+              .timer__cell.timer__cell--sec-1 0
+              .timer__cell.timer__cell--sec-2 0
+            .timer__text Секунд
+
+      .page-header__note АКЦИЯ действует #[strong.page-header__accent 6 марта!] Осталось #[strong.page-header__accent 3 места!]
+
+    main
+      section.problems
+        h2.visually-hidden Проблемы:
+
+        ul.problems__list
+          li.problems__item.problems__item--pic-1
+            p.problems__desc Дряблая кожа рук
+
+          li.problems__item.problems__item--pic-2
+            p.problems__desc Лишние сантиметры в талии
+
+          li.problems__item.problems__item--pic-3
+            p.features__desc Целлюлит в зоне бёдер
+
+      section.profit
+        h2.profit__title Плоский и подтянутый живот!
+
+        .profit__wrapper
+          .profit__text
+            p.profit__ph
+              | Бельгия — одна из тех стран, которая не имеет точного определения в сознании 
+              | среднестатистического жителя России: и не Франция, и не Германия, и не Нидерланды, 
+              | а нечто такое, что самым гармоничным образом сочетает в себе характерные черты 
+              | всех вышеупомянутых стран. В гастрономии — в том числе.
+            p.profit__ph
+              | Несмотря на эту неопределенность, есть вещи, очевидные буквально всем: бельгийский шоколад,
+              | чуть ли не лучший в мире, пиво — поражающее разнообразием вкусов и способов приготовления.
+
+          .profit__image.profit__image--pic-1
+
+      section.results.results--background-1
+        h2.visually-hidden Результаты
+
+        ul.results__list
+          li.results__item
+            figure.results__before
+              img.results__img(src = "img/image-1-before.jpg", width = "133", height = "105", alt = "До")
+              figcaption.results__note До
+            figure.results__after
+              img.results__img(src = "img/image-1-after.jpg", width = "133", height = "105", alt = "После")
+              figcaption.results__note После
+          li.results__item
+            figure.results__before
+              img.results__img(src = "img/image-2-before.jpg", width = "148", height = "105", alt = "До")
+              figcaption.results__note До
+            figure.results__after
+              img.results__img(src = "img/image-2-after.jpg", width = "148", height = "105", alt = "После")
+              figcaption.results__note После
+          li.results__item
+            figure.results__before
+              img.results__img(src = "img/image-3-before.jpg", width = "138", height = "105", alt = "До")
+              figcaption.results__note До
+            figure.results__after
+              img.results__img(src = "img/image-3-after.jpg", width = "138", height = "105", alt = "После")
+              figcaption.results__note После
+
+      section.profit.profit--reverse
+        h2.profit__title Стройные ноги и бёдра
+
+        .profit__wrapper
+          .profit__text
+            p.profit__ph
+              | Бельгия — одна из тех стран, которая не имеет точного определения в сознании 
+              | среднестатистического жителя России: и не Франция, и не Германия, и не Нидерланды, 
+              | а нечто такое, что самым гармоничным образом сочетает в себе характерные черты 
+              | всех вышеупомянутых стран. В гастрономии — в том числе.
+            p.profit__ph
+              | Несмотря на эту неопределенность, есть вещи, очевидные буквально всем: бельгийский шоколад,
+              | чуть ли не лучший в мире, пиво — поражающее разнообразием вкусов и способов приготовления.
+
+          .profit__image.profit__image--pic-2
+
+      section.results.results--background-2
+        h2.visually-hidden Результаты
+
+        ul.results__list
+          li.results__item
+            figure.results__before
+              img.results__img(src = "img/image-4-before.jpg", width = "134", height = "100", alt = "До")
+              figcaption.results__note До
+            figure.results__after
+              img.results__img(src = "img/image-4-after.jpg", width = "134", height = "100", alt = "После")
+              figcaption.results__note После
+          li.results__item
+            figure.results__before
+              img.results__img(src = "img/image-5-before.jpg", width = "152", height = "105", alt = "До")
+              figcaption.results__note До
+            figure.results__after
+              img.results__img(src = "img/image-5-after.jpg", width = "152", height = "105", alt = "После")
+              figcaption.results__note После
+          li.results__item
+            figure.results__before
+              img.results__img(src = "img/image-6-before.jpg", width = "135", height = "105", alt = "До")
+              figcaption.results__note До
+            figure.results__after
+              img.results__img(src = "img/image-6-after.jpg", width = "135", height = "105", alt = "После")
+              figcaption.results__note После
+
+      section.profit
+        h2.profit__title Красивые руки в любом возрасте
+
+        .profit__wrapper
+          .profit__text
+            p.profit__ph
+              | Бельгия — одна из тех стран, которая не имеет точного определения в сознании 
+              | среднестатистического жителя России: и не Франция, и не Германия, и не Нидерланды, 
+              | а нечто такое, что самым гармоничным образом сочетает в себе характерные черты 
+              | всех вышеупомянутых стран. В гастрономии — в том числе.
+            p.profit__ph
+              | Несмотря на эту неопределенность, есть вещи, очевидные буквально всем: бельгийский шоколад,
+              | чуть ли не лучший в мире, пиво — поражающее разнообразием вкусов и способов приготовления.
+
+          .profit__image.profit__image--pic-3
+
+      section.results.results--background-3
+        h2.visually-hidden Результаты
+
+        ul.results__list
+          li.results__item
+            figure.results__before
+              img.results__img(src = "img/image-7-before.jpg", width = "134", height = "105", alt = "До")
+              figcaption.results__note До
+            figure.results__after
+              img.results__img(src = "img/image-7-after.jpg", width = "134", height = "105", alt = "После")
+              figcaption.results__note После
+          li.results__item
+            figure.results__before
+              img.results__img(src = "img/image-8-before.jpg", width = "150", height = "105", alt = "До")
+              figcaption.results__note До
+            figure.results__after
+              img.results__img(src = "img/image-8-after.jpg", width = "150", height = "105", alt = "После")
+              figcaption.results__note После
+          li.results__item
+            figure.results__before
+              img.results__img(src = "img/image-9-before.jpg", width = "138", height = "105", alt = "До")
+              figcaption.results__note До
+            figure.results__after
+              img.results__img(src = "img/image-9-after.jpg", width = "138", height = "105", alt = "После")
+              figcaption.results__note После
+
+    footer.page-footer
+
+      .page-footer__top
+        .regform
+          form.regform__form(action = "#", method = "post")
+            input.regform__name(type = "text", placeholder = "Введите ваше имя")
+            input.regform__tel(type = "tel", placeholder = "Введите номер телефона")
+            .regform__wrapper
+              input.regform__height(type = "text", placeholder = "Рост (см)")
+              input.regform__weight(type = "text", placeholder = "Вес (кг)")
+              input.regform__age(type = "text", placeholder = "Возраст (лет)")
+
+            button.btn(type = "submit") Записаться
+
+      .page-footer__bottom
+        .page-footer__text Успей записаться, количество мест ограничено
+
+        .timer.timer--gigas.page-footer__timer
+          h3.timer__title До окончания акции:
+
+          .timer__block
+            .timer__wrapper
+              .timer__cell.timer__cell--day-1 0
+              .timer__cell.timer__cell--day-2 0
+            .timer__text Дней
+
+          .timer__block
+            .timer__wrapper
+              .timer__cell.timer__cell--hour-1 0
+              .timer__cell.timer__cell--hour-2 0
+            .timer__text Часов
+
+          .timer__block
+            .timer__wrapper
+              .timer__cell.timer__cell--min-1 0
+              .timer__cell.timer__cell--min-2 0
+            .timer__text Минут
+
+          .timer__block
+            .timer__wrapper
+              .timer__cell.timer__cell--sec-1 0
+              .timer__cell.timer__cell--sec-2 0
+            .timer__text Секунд
+
+    script(src = "js/timer.js")
+
+

@@ -1,0 +1,39 @@
+.problems
+  background-image: linear-gradient(to top, $cosmic 0, $violet-eggplant 100%)
+  
+  &__list
+    display: flex
+    flex-direction: column
+    align-items: center
+    list-style-type: none
+
+  &__item
+    position: relative
+    padding-top: 240px
+    color: $white
+    font(20px, 27px, 400, uppercase)
+    
+    &::before
+      position: absolute
+      top: 20px
+      left: 50%
+      display: block
+      width: 198px
+      height: 198px
+      content: ""
+      
+      transform: translateX(-50%)
+
+    &--pic-1
+      &::before
+        background-image: url("../img/image-problems-1.png")
+
+    &--pic-2
+      &::before
+        background-image: url("../img/image-problems-2.png")
+
+    &--pic-3
+      padding-bottom: 20px
+
+      &::before
+        background-image: url("../img/image-problems-3.png")

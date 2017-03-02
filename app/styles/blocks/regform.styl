@@ -1,0 +1,48 @@
+.regform
+  padding: 30px
+  background-color: $charade
+  
+  &__form
+    display: flex
+    flex-direction: column
+    align-items: center
+    
+  &__name
+  &__tel
+  &__height
+  &__weight
+  &__age
+    outline: none
+    box-sizing: border-box
+    padding-left: 16px
+    padding-right: 8px
+    border-radius: 20px
+    border: none
+    margin-bottom: 20px
+    font(10px, 40px, 400)
+
+    &::-webkit-input-placeholder
+      color: lighten($black, 40%)
+      font-weight: 400
+
+    &:focus
+      background-color: lighten($golden-grass, 60%)
+
+      &::-webkit-input-placeholder
+        color: lighten($black, 20%)
+        font-weight: 700
+
+  &__name
+  &__tel
+  &__wrapper
+    width: 100%
+
+  &__wrapper
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+  &__height
+  &__weight
+  &__age
+    width: 31%
