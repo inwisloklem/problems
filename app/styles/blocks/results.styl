@@ -1,23 +1,26 @@
 .results
   padding-top: 20px
-  background-color: $desert-sand-1
+  background-image: linear-gradient(to top, $desert-sand-2 0, $desert-sand-1 100%)
 
   &__item
-    padding: 0 20px
     display: flex
     flex-direction: row
     justify-content: center
-    
+    padding: 0 20px
+
   &__before
   &__after
     margin-bottom: 20px
-    background-color: $white
     border: 4px solid $white
-    
+    background-color: $white
+
   &__before
-    margin-right: 20px
+    margin-right: 2px
+
+    @media $mobile
+      margin-right: 10px
 
   &__note
     padding-left: 2px
     color: lighten($black, 30%)
-    font(15px, 23px, 700, uppercase)
+    font(15px, 23px, 500, uppercase)

@@ -1,14 +1,14 @@
 @font-face {
-  font-weight: 300;
-  font-style: normal;
-  font-family: "Open Sans";
-  src: local("Open Sans Light"), local("OpenSans-Light"), url("../fonts/opensanslight.woff") format("woff"), url("../fonts/opensanslight.woff2") format("woff2");
-}
-@font-face {
   font-weight: 400;
   font-style: normal;
   font-family: "Open Sans";
   src: local("Open Sans"), local("OpenSans"), url("../fonts/opensans.woff") format("woff"), url("../fonts/opensans.woff2") format("woff2");
+}
+@font-face {
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Open Sans";
+  src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url("../fonts/opensans.woff") format("woff"), url("../fonts/opensans.woff2") format("woff2");
 }
 @font-face {
   font-weight: 700;
@@ -22,8 +22,8 @@ body {
 }
 body,
 input {
+  font-weight: 400;
   font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: 300;
 }
 h1,
 h2,
@@ -73,7 +73,7 @@ ul {
   padding-bottom: 20px;
 }
 .page-header {
-  background-color: #f3d2c4;
+  background-image: linear-gradient(to top, #000456 0, #f0c8b6 100%);
 }
 .page-header__title {
   padding: 20px 5px;
@@ -84,8 +84,8 @@ ul {
 }
 .page-header__note {
   padding: 20px 5px;
-  color: #fff;
   background-color: #ba628e;
+  color: #fff;
   text-align: center;
   font-size: 36px;
   line-height: 40px;
@@ -186,14 +186,14 @@ ul {
 .regform__height,
 .regform__weight,
 .regform__age {
-  outline: none;
   box-sizing: border-box;
-  padding-left: 16px;
-  padding-right: 8px;
-  border-radius: 20px;
-  border: none;
   margin-bottom: 20px;
-  font-size: 10px;
+  padding-right: 8px;
+  padding-left: 16px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
   line-height: 40px;
 }
 .regform__name::-webkit-input-placeholder,
@@ -210,19 +210,40 @@ ul {
 .regform__weight:focus,
 .regform__age:focus {
   background-color: #f1d7a6;
+  font-weight: 700;
 }
 .regform__name:focus::-webkit-input-placeholder,
 .regform__tel:focus::-webkit-input-placeholder,
 .regform__height:focus::-webkit-input-placeholder,
 .regform__weight:focus::-webkit-input-placeholder,
 .regform__age:focus::-webkit-input-placeholder {
-  color: #333;
   font-weight: 700;
 }
 .regform__name,
 .regform__tel,
 .regform__wrapper {
   width: 100%;
+}
+.regform__name,
+.regform__tel {
+  padding-left: 36px;
+  background-repeat: no-repeat;
+}
+.regform__name {
+  background-image: url("../img/icon-head.png");
+  background-position: left 14px center;
+  background-size: 15px 15px;
+}
+.regform__name:focus {
+  background-image: url("../img/icon-head-dark.png");
+}
+.regform__tel {
+  background-image: url("../img/icon-phone.png");
+  background-position: left 16px center;
+  background-size: 11px 11px;
+}
+.regform__tel:focus {
+  background-image: url("../img/icon-phone-dark.png");
 }
 .regform__wrapper {
   display: flex;
@@ -236,35 +257,40 @@ ul {
 }
 .results {
   padding-top: 20px;
-  background-color: #f0c8b6;
+  background-image: linear-gradient(to top, #f3d2c4 0, #f0c8b6 100%);
 }
 .results__item {
-  padding: 0 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding: 0 20px;
 }
 .results__before,
 .results__after {
   margin-bottom: 20px;
-  background-color: #fff;
   border: 4px solid #fff;
+  background-color: #fff;
 }
 .results__before {
-  margin-right: 20px;
+  margin-right: 2px;
+}
+@media (min-width: 340px) {
+  .results__before {
+    margin-right: 10px;
+  }
 }
 .results__note {
   padding-left: 2px;
   color: #4d4d4d;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 23px;
   text-transform: uppercase;
 }
 .timer {
   min-width: 280px;
-  text-align: center;
   background-color: #ba628e;
+  text-align: center;
 }
 .timer--gigas {
   background-color: #403c8a;
@@ -275,7 +301,6 @@ ul {
   text-align: center;
   text-transform: none;
   font-size: 21px;
-  font-weight: 300;
   line-height: 26px;
 }
 .timer__block {

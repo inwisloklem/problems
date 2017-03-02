@@ -14,13 +14,13 @@ html(lang = "ru")
       .page-header__wrapper
         .regform
           form.regform__form(action = "#", method = "post")
-            input.regform__name(type = "text", placeholder = "Введите ваше имя")
-            input.regform__tel(type = "tel", placeholder = "Введите номер телефона")
+            input.regform__name(type = "text", name = "name", placeholder = "Введите ваше имя")
+            input.regform__tel(type = "tel", name = "phone", placeholder = "Введите номер телефона")
             .regform__wrapper
-              input.regform__height(type = "text", placeholder = "Рост (см)")
-              input.regform__weight(type = "text", placeholder = "Вес (кг)")
-              input.regform__age(type = "text", placeholder = "Возраст (лет)")
-                          
+              input.regform__height(type = "text", name = "height", placeholder = "Рост")
+              input.regform__weight(type = "text", name = "weight", placeholder = "Вес")
+              input.regform__age(type = "text", name = "age", placeholder = "Возраст")
+
             button.btn(type = "submit") Записаться
 
         .timer.page-header__timer
@@ -72,9 +72,9 @@ html(lang = "ru")
         .profit__wrapper
           .profit__text
             p.profit__ph
-              | Бельгия — одна из тех стран, которая не имеет точного определения в сознании 
-              | среднестатистического жителя России: и не Франция, и не Германия, и не Нидерланды, 
-              | а нечто такое, что самым гармоничным образом сочетает в себе характерные черты 
+              | Бельгия — одна из тех стран, которая не имеет точного определения в сознании
+              | среднестатистического жителя России: и не Франция, и не Германия, и не Нидерланды,
+              | а нечто такое, что самым гармоничным образом сочетает в себе характерные черты
               | всех вышеупомянутых стран. В гастрономии — в том числе.
             p.profit__ph
               | Несмотря на эту неопределенность, есть вещи, очевидные буквально всем: бельгийский шоколад,
@@ -114,9 +114,9 @@ html(lang = "ru")
         .profit__wrapper
           .profit__text
             p.profit__ph
-              | Бельгия — одна из тех стран, которая не имеет точного определения в сознании 
-              | среднестатистического жителя России: и не Франция, и не Германия, и не Нидерланды, 
-              | а нечто такое, что самым гармоничным образом сочетает в себе характерные черты 
+              | Бельгия — одна из тех стран, которая не имеет точного определения в сознании
+              | среднестатистического жителя России: и не Франция, и не Германия, и не Нидерланды,
+              | а нечто такое, что самым гармоничным образом сочетает в себе характерные черты
               | всех вышеупомянутых стран. В гастрономии — в том числе.
             p.profit__ph
               | Несмотря на эту неопределенность, есть вещи, очевидные буквально всем: бельгийский шоколад,
@@ -156,9 +156,9 @@ html(lang = "ru")
         .profit__wrapper
           .profit__text
             p.profit__ph
-              | Бельгия — одна из тех стран, которая не имеет точного определения в сознании 
-              | среднестатистического жителя России: и не Франция, и не Германия, и не Нидерланды, 
-              | а нечто такое, что самым гармоничным образом сочетает в себе характерные черты 
+              | Бельгия — одна из тех стран, которая не имеет точного определения в сознании
+              | среднестатистического жителя России: и не Франция, и не Германия, и не Нидерланды,
+              | а нечто такое, что самым гармоничным образом сочетает в себе характерные черты
               | всех вышеупомянутых стран. В гастрономии — в том числе.
             p.profit__ph
               | Несмотря на эту неопределенность, есть вещи, очевидные буквально всем: бельгийский шоколад,
@@ -197,12 +197,12 @@ html(lang = "ru")
       .page-footer__top
         .regform
           form.regform__form(action = "#", method = "post")
-            input.regform__name(type = "text", placeholder = "Введите ваше имя")
-            input.regform__tel(type = "tel", placeholder = "Введите номер телефона")
+            input.regform__name(type = "text", name = "name", placeholder = "Введите ваше имя")
+            input.regform__tel(type = "tel", name = "phone", placeholder = "Введите номер телефона")
             .regform__wrapper
-              input.regform__height(type = "text", placeholder = "Рост (см)")
-              input.regform__weight(type = "text", placeholder = "Вес (кг)")
-              input.regform__age(type = "text", placeholder = "Возраст (лет)")
+              input.regform__height(type = "text", name = "height", placeholder = "Рост")
+              input.regform__weight(type = "text", name = "weight", placeholder = "Вес")
+              input.regform__age(type = "text", name = "age", placeholder = "Возраст")
 
             button.btn(type = "submit") Записаться
 
@@ -237,5 +237,3 @@ html(lang = "ru")
             .timer__text Секунд
 
     script(src = "js/timer.js")
-
-
