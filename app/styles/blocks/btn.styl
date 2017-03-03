@@ -6,7 +6,12 @@
   color: $white
   background-color: $golden-grass
   font(18px, 40px, 700, uppercase)
+  transition: background-color 0.4s linear
 
   &:hover
     background-color: lighten($golden-grass, 20%)
+    transition: background-color 0.4s linear
+
+  &:active
+    background-color: darken($golden-grass, 20%)
 

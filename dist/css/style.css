@@ -129,8 +129,10 @@ ul {
 }
 @media (min-width: 1100px) {
   .page-footer__bottom {
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -ms-flex-direction: row;
+        flex-direction: row;
     box-sizing: border-box;
     padding: 20px;
     background-color: #403c8a;
@@ -217,15 +219,20 @@ ul {
   background-image: linear-gradient(to top, #743e68 0, #a11381 100%);
 }
 .problems__list {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
   list-style-type: none;
 }
 @media (min-width: 700px) {
   .problems__list {
-    flex-direction: row;
-    align-items: flex-start;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-align: start;
+        align-items: flex-start;
   }
 }
 .problems__item {
@@ -273,18 +280,23 @@ ul {
   }
 }
 .profit__wrapper {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
+  -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 @media (min-width: 1100px) {
   .profit__wrapper {
-    flex-direction: row;
+    -ms-flex-direction: row;
+        flex-direction: row;
   }
 }
 @media (min-width: 1100px) {
   .profit--reverse .profit__wrapper {
-    flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
   }
   .profit--reverse .profit__image {
     margin-left: auto;
@@ -384,9 +396,12 @@ ul {
   background-color: #2d2c40;
 }
 .regform__form {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
 }
 @media (min-width: 700px) and (max-width: 1099px) {
   .regform__form {
@@ -461,9 +476,12 @@ ul {
   background-image: url("../img/icon-phone-dark.png");
 }
 .regform__wrapper {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 .regform__height,
 .regform__weight,
@@ -501,16 +519,23 @@ ul {
 }
 @media (min-width: 700px) {
   .results__list {
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: center;
+        justify-content: center;
   }
 }
 .results__item {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
   padding: 0 20px;
 }
 .results__before,

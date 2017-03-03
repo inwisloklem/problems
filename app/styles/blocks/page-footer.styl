@@ -1,5 +1,11 @@
 .page-footer
   background-color: $gigas
+  
+  @media $desktop
+    padding-top: 220px
+    padding-bottom: 120px
+    background-color: $white
+    background-image: url("../img/background-center.jpg")
 
   &__text
     padding: 20px 5px
@@ -7,5 +13,47 @@
     text-align: center
     font(27px, 30px, 400)
 
+    @media $desktop
+      background-color: $gigas
+      margin-right: 20px
+
   &__timer
     padding-bottom: 20px
+
+    @media $desktop
+      padding-bottom: 0
+
+  &__top
+  &__bottom
+    @media $desktop
+      margin: auto
+      width: 800px
+      border-radius: 15px
+    
+  &__top
+    @media $desktop
+      position: relative
+      margin-bottom: 10px
+      box-sizing: border-box
+      padding-right: 100px
+      padding-left: 300px
+      background-color: $charade
+
+      &::before
+        position: absolute
+        top: -198px
+        left: 110px
+        z-index: 5
+        display: block
+        width: 556px
+        height: 368px
+        content: ""
+        background-image: url("../img/image-girl-bottom.png")
+
+  &__bottom
+    @media $desktop
+      display: flex
+      flex-direction: row
+      box-sizing: border-box
+      padding: 20px
+      background-color: $gigas

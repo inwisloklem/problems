@@ -1,6 +1,34 @@
 .results
+  position: relative
   padding-top: 20px
   background-image: linear-gradient(to top, $desert-sand-2 0, $desert-sand-1 100%)
+
+  &__title
+    display: none
+    color: $stratos
+    font(40px, 48px, 300)
+
+    @media $desktop
+      position: absolute
+      top: -38px
+      left: calc(50% + 65px)
+      display: block
+
+  &--reverse
+    .results
+      &__title
+        @media $desktop
+          left: calc(50% - 50px)
+          transform: translateX(-100%)
+
+  &__list
+    list-style-type: none
+
+    @media $tablet-desktop
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: center
 
   &__item
     display: flex

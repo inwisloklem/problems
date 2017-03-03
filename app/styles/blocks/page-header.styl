@@ -1,11 +1,42 @@
 .page-header
-  background-image: linear-gradient(to top, $stratos 0, $desert-sand-1 100%)
+  background-color: $white
+  
+  @media $tablet
+    background-image: url("../img/image-girl.png")
+    background-repeat: no-repeat
+    background-position: top center
+    background-size: auto
+
+  @media $desktop
+    background-image: url("../img/image-girl.png"), url("../img/background-top.jpg")
+    background-repeat: no-repeat
+    background-position: left calc(50% - 180px) bottom 120px, center
+    background-size: auto, cover
+
+    &::after
+      position: absolute
+      left: calc(50% + 90px)
+      top: 200px
+      height: 400px
+      width: 420px
+      background-color: $tapestry
+      content: ""
 
   &__title
     padding: 20px 5px
     color: $stratos
     text-align: center
     font(36px, 50px)
+
+    @media $tablet
+      padding-top: 500px
+
+    @media $desktop
+      box-sizing: border-box
+      margin: auto
+      padding-top: 20px
+      padding-left: 140px
+      max-width: 860px
 
   &__note
     padding: 20px 5px
@@ -14,5 +45,18 @@
     text-align: center
     font(36px, 40px)
 
+    @media $desktop
+      position: relative
+      z-index: 5
+      margin-bottom: 40px
+
   &__timer
     padding-top: 20px
+
+  &__wrapper
+    position: relative
+    z-index: 5
+
+    @media $desktop
+      width: 400px
+      padding-left: 600px

@@ -3,6 +3,7 @@
 var gulp = require("gulp");
 
 var autoprefixer = require("gulp-autoprefixer");
+var beautify = require("gulp-html-beautify");
 var cssmin = require("gulp-csso");
 var del = require("del");
 var htmlmin = require("gulp-htmlmin");
@@ -97,8 +98,8 @@ gulp.task("dist-styles", function() {
     .pipe(autoprefixer({
       browsers: ["last 2 versions"]
     }))
-    .pipe(cssmin())
-    .pipe(rename("style.min.css"))
+    // .pipe(cssmin())
+    // .pipe(rename("style.min.css"))
     .pipe(gulp.dest("dist/css"));
 });
 
@@ -106,7 +107,8 @@ gulp.task("dist-markup", function() {
   return gulp.src("app/pages/*.pug")
     .pipe(plumber())
     .pipe(pug())
-    .pipe(htmlmin())
+    // .pipe(htmlmin())
+    .pipe(beautify())
     .pipe(gulp.dest("dist"))
     .pipe(server.stream());
 });

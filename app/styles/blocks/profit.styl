@@ -1,27 +1,70 @@
 .profit
+  @media $desktop
+    background-image: url("../img/background-center.jpg")
+
   &__wrapper
     display: flex
     flex-direction: column-reverse
     justify-content: center
 
+    @media $desktop
+      flex-direction: row
+
+  &--reverse
+    @media $desktop
+      .profit
+        &__wrapper
+          flex-direction: row-reverse
+
+        &__image
+          margin-left: auto
+          margin-right: 20px
+
+        &__text
+          margin-left: 20px
+          margin-right: 120px
+
   &__title
-    margin-top: 20px
+    padding-top: 20px
+    margin-bottom: 10px
     color: $stratos
     text-align: center
     font(26px, 35px, 400)
 
   &__text
+    position: relative
     margin: 20px
-    padding: 20px
-    border: 1px solid $black
+    background-color: $white
+
+    @media $desktop
+      width: 400px
+      margin-left: 120px
+      margin-bottom: 60px
+
+      &::before
+      &::after
+        position: absolute
+        z-index: 5
+        display: block
+        width: 300px
+        height: 300px
+        content: ""
+        background-color: $white
+        box-shadow: 0 0 9px 1px rgba($shark, 0.26)
+
+      &::before
+        top: -10px
+        right: -10px
+      
+      &::after
+        bottom: -10px
+        left: -10px
     
   &__image
     margin: auto
     margin-top: 20px
     width: 300px
     height: 300px
-    // width: 349px
-    // height: 349px
     background-position: center
     background-size: cover
 
@@ -34,9 +77,24 @@
     &--pic-3
       background-image: url("../img/image-circle-3.png")
 
+    @media $tablet-desktop
+      width: 349px
+      height: 349px
+
+    @media $desktop
+      margin-left: 20px
+
   &__ph
     margin-bottom: 20px
 
     &:last-of-type
       margin-bottom: 0
 
+  &__inner
+    padding: 20px
+    border: 1px solid $black
+
+    @media $desktop
+      position: relative
+      z-index: 10
+      background-color: $white

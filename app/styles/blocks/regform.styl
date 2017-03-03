@@ -7,11 +7,17 @@
     flex-direction: column
     align-items: center
 
+    @media $tablet
+      margin: auto
+      width: 80%
+
   &__name
   &__tel
   &__height
   &__weight
   &__age
+    position: relative
+    z-index: 10
     box-sizing: border-box
     margin-bottom: 20px
     padding-right: 8px
