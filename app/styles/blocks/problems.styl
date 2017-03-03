@@ -1,18 +1,23 @@
 .problems
   background-image: linear-gradient(to top, $cosmic 0, $violet-eggplant 100%)
-  
+
   &__list
     display: flex
     flex-direction: column
     align-items: center
     list-style-type: none
 
+    @media $tablet-desktop
+      flex-direction: row
+      align-items: flex-start
+
   &__item
     position: relative
     padding-top: 240px
+    width: 33%
     color: $white
     font(20px, 27px, 400, uppercase)
-    
+
     &::before
       position: absolute
       top: 20px
@@ -21,8 +26,11 @@
       width: 198px
       height: 198px
       content: ""
-      
+
       transform: translateX(-50%)
+
+    @media $tablet-desktop
+      padding-bottom: 20px
 
     &--pic-1
       &::before
@@ -37,3 +45,6 @@
 
       &::before
         background-image: url("../img/image-problems-3.png")
+
+  &__desc
+    text-align: center
