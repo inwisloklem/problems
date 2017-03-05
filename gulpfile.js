@@ -1,6 +1,7 @@
 "use strict";
 
 var gulp = require("gulp");
+var pjson = require("./package.json");
 
 var autoprefixer = require("gulp-autoprefixer");
 var cssmin = require("gulp-csso");
@@ -19,6 +20,7 @@ var styl = require("gulp-stylus");
 var svgmin = require("gulp-svgmin");
 var svgstore = require("gulp-svgstore");
 var zip = require("gulp-zip");
+
 
 gulp.task("serve", ["markup", "styles"], function() {
   server.init({
@@ -127,6 +129,6 @@ gulp.task("dist-clean", function() {
 
 gulp.task("dist-zip", function() {
   return gulp.src(["dist/*", "dist/*/**", "!dist/*.zip"])
-  .pipe(zip("dist-problems.zip"))
+  .pipe(zip("dist-" + pjson.name + ".zip"))
   .pipe(gulp.dest("dist"));
 });
