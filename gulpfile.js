@@ -18,6 +18,7 @@ var server = require("browser-sync").create();
 var styl = require("gulp-stylus");
 var svgmin = require("gulp-svgmin");
 var svgstore = require("gulp-svgstore");
+var zip = require("gulp-zip");
 
 gulp.task("serve", ["markup", "styles"], function() {
   server.init({
@@ -71,6 +72,7 @@ gulp.task("dist", function(fn) {
     "dist-images",
     "dist-copy",
     // "dist-replace",
+    "dist-zip",
     fn
   );
 });
@@ -121,4 +123,10 @@ gulp.task("dist-replace", function() {
 
 gulp.task("dist-clean", function() {
   return del(["dist/**/*", "!dist", "!dist/.gitkeep"]);
+});
+
+gulp.task("dist-zip", function() {
+  return gulp.src(["dist/*", "dist/*/**", "!dist/*.zip"])
+  .pipe(zip("dist-problems.zip"))
+  .pipe(gulp.dest("dist"));
 });
