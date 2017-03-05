@@ -3,13 +3,13 @@
 var gulp = require("gulp");
 
 var autoprefixer = require("gulp-autoprefixer");
-var beautify = require("gulp-html-beautify");
 var cssmin = require("gulp-csso");
 var del = require("del");
 var htmlmin = require("gulp-htmlmin");
 var imagemin = require("gulp-imagemin");
 var inject = require("gulp-inject");
 var plumber = require("gulp-plumber");
+var prettify = require("gulp-html-prettify");
 var pug = require("gulp-pug");
 var rename = require("gulp-rename");
 var replace = require("gulp-replace");
@@ -70,7 +70,7 @@ gulp.task("dist", function(fn) {
     "dist-markup",
     "dist-images",
     "dist-copy",
-    "dist-replace",
+    // "dist-replace",
     fn
   );
 });
@@ -108,7 +108,7 @@ gulp.task("dist-markup", function() {
     .pipe(plumber())
     .pipe(pug())
     // .pipe(htmlmin())
-    .pipe(beautify())
+    .pipe(prettify())
     .pipe(gulp.dest("dist"))
     .pipe(server.stream());
 });
